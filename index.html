@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>CHÙA SÓC LỚN — DẤU ẤN LỊCH SỬ VÀ BẢN SẮC VĂN HÓA KHMER</title>
+  <meta name="description" content="Bài thuyết trình môn Giáo dục địa phương: Chùa Sóc Lớn – Dấu ấn lịch sử và bản sắc văn hóa Khmer Nam Bộ tại Lộc Ninh, Bình Phước.">
+  <meta name="theme-color" content="#0A1118">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230A1118'/%3E%3Cpath d='M16 4L6 14v14h20V14z' fill='none' stroke='%23E6B325' stroke-width='2'/%3E%3Ccircle cx='16' cy='18' r='4' fill='%23B8242A'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/fonts/fonts.css">
+  <link rel="stylesheet" href="soclon_style.css">
+</head>
+<body>
+
+  <!-- 1. TOPBAR THANH ĐIỀU HƯỚNG CAO CẤP -->
+  <header class="topbar" id="topbar">
+    <div class="brand">
+      <svg class="logo" viewBox="0 0 40 40" aria-hidden="true">
+        <path d="M20 4L7 16v20h26V16L20 4z" fill="none" stroke="#E6B325" stroke-width="2.4" stroke-linejoin="round"/>
+        <path d="M14 36V22h12v14" fill="none" stroke="#D49A3D" stroke-width="2.2"/>
+        <circle cx="20" cy="14" r="3.2" fill="#B8242A"/>
+        <path d="M4 36h32" stroke="#F7F4EB" stroke-width="2"/>
+      </svg>
+      <div class="brand-text">
+        <strong>CHÙA SÓC LỚN — DI SẢN VĂN HÓA KHMER</strong>
+        <span>Giáo dục địa phương · Huyện Lộc Ninh, Tỉnh Bình Phước</span>
+      </div>
+    </div>
+    
+    <div class="top-actions">
+      <div class="counter counter-top" aria-hidden="true">
+        <b id="topCur">01</b><span>/ <i id="topTotal">15</i></span>
+      </div>
+      <button class="btn" id="btnToc" type="button" aria-haspopup="dialog" data-tip="Mục lục (T)">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg><span class="lbl">Mục lục</span>
+      </button>
+      <button class="btn" id="btnNotes" type="button" aria-pressed="false" data-tip="Lời dẫn thuyết trình (N)">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14v13H9l-4 4z"/><path d="M9 9h6M9 13h4"/></svg><span class="lbl">Lời dẫn</span>
+      </button>
+      <button class="btn icon" id="btnHelp" type="button" data-tip="Phím tắt (?)" aria-label="Hướng dẫn phím tắt">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.6 2.6 0 1 1 3.6 2.4c-.8.4-1.1.9-1.1 1.8M12 17v.01"/></svg>
+      </button>
+      <button class="btn icon primary-ghost" id="btnFs" type="button" data-tip="Toàn màn hình (F)" aria-label="Toàn màn hình">
+        <svg class="i-enter" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
+        <svg class="i-exit" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- 2. STAGE SÂN KHẤU TRÌNH CHIẾU TRUNG TÂM (16:9) -->
+  <main class="stage-wrap" id="stageWrap">
+    <div class="stage" id="stage" aria-live="polite">
+      <!-- 16 Slides injected dynamically by soclon_script.js -->
+    </div>
+
+    <!-- NÚT ĐIỀU HƯỚNG MÀN HÌNH RỘNG KHI FULLSCREEN -->
+    <button class="fs-nav prev" id="fsPrev" type="button" aria-label="Slide trước"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <button class="fs-nav next" id="fsNext" type="button" aria-label="Slide sau"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+
+    <!-- BẢNG LỜI DẪN THUYẾT TRÌNH (SPEAKER NOTES) -->
+    <aside class="notes-panel" id="notesPanel" aria-label="Lời dẫn thuyết trình" aria-hidden="true">
+      <div class="notes-head">
+        <div class="notes-title-group">
+          <span class="notes-badge">🎙️ Lời dẫn thuyết trình</span>
+          <b id="notesSlideTitle">Slide 01: Giới thiệu chủ đề</b>
+        </div>
+        <button class="btn icon sm" id="notesClose" type="button" aria-label="Đóng lời dẫn" data-tip="Đóng (N)">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div class="notes-body" id="notesBody"></div>
+    </aside>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </main>
+
+  <!-- 3. CONTROLS THANH ĐIỀU KHIỂN BÊN DƯỚI -->
+  <footer class="controls" id="controls">
+    <button class="btn nav" id="btnPrev" type="button" data-tip="Slide trước (←)">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg><span class="lbl">Trước</span>
+    </button>
+    
+    <div class="counter" aria-label="Vị trí slide">
+      <b id="botCur">01</b><span>/ <i id="botTotal">15</i></span>
+    </div>
+
+    <div class="progress" id="progress" role="progressbar" aria-valuemin="1" aria-valuemax="15" aria-valuenow="1">
+      <div class="track"><div class="fill" id="progFill"></div></div>
+      <div class="ticks" id="ticks"></div>
+    </div>
+
+    <div class="hints" aria-hidden="true">
+      <kbd>←</kbd><kbd>→</kbd><kbd>Space</kbd><i></i><kbd>F</kbd><kbd>T</kbd><kbd>N</kbd>
+    </div>
+
+    <button class="btn nav primary" id="btnNext" type="button" data-tip="Slide sau (→ / Space)">
+      <span class="lbl">Tiếp theo</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+    </button>
+  </footer>
+
+  <!-- 4. DIALOG MỤC LỤC 15 SLIDE CÓ THUMBNAIL -->
+  <div class="overlay" id="tocOverlay" hidden>
+    <div class="scrim" data-close></div>
+    <nav class="drawer" role="dialog" aria-modal="true" aria-label="Mục lục 15 slide">
+      <div class="drawer-head">
+        <div>
+          <small>MỤC LỤC TRÌNH CHIẾU</small>
+          <b>Chùa Sóc Lớn — 15 Slide Chuyên Đề</b>
+        </div>
+        <button class="btn icon" type="button" data-close aria-label="Đóng mục lục">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+      <div class="drawer-body" id="tocBody"></div>
+    </nav>
+  </div>
+
+  <!-- 5. DIALOG HƯỚNG DẪN PHÍM TẮT -->
+  <div class="overlay center" id="helpOverlay" hidden>
+    <div class="scrim" data-close></div>
+    <div class="modal" role="dialog" aria-modal="true" aria-label="Phím tắt">
+      <div class="drawer-head">
+        <div><small>HƯỚNG DẪN THUYẾT TRÌNH</small><b>Phím tắt điều khiển</b></div>
+        <button class="btn icon" type="button" data-close aria-label="Đóng">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+      <dl class="keys">
+        <div><dt><kbd>→</kbd> <kbd>Space</kbd> <kbd>PgDn</kbd></dt><dd>Slide tiếp theo</dd></div>
+        <div><dt><kbd>←</kbd> <kbd>PgUp</kbd></dt><dd>Slide trước</dd></div>
+        <div><dt><kbd>Home</kbd> / <kbd>End</kbd></dt><dd>Về slide đầu / đến slide cuối</dd></div>
+        <div><dt><kbd>F</kbd></dt><dd>Bật / tắt toàn màn hình</dd></div>
+        <div><dt><kbd>T</kbd></dt><dd>Mở mục lục chọn slide nhanh</dd></div>
+        <div><dt><kbd>N</kbd></dt><dd>Bật / tắt lời dẫn thuyết trình</dd></div>
+        <div><dt><kbd>?</kbd></dt><dd>Mở bảng trợ giúp này</dd></div>
+        <div><dt><kbd>Esc</kbd></dt><dd>Đóng các cửa sổ đang mở</dd></div>
+      </dl>
+      <p class="modal-note">Trên điện thoại hoặc màn hình cảm ứng: vuốt ngang để đổi slide, chạm vào ảnh để phóng to chi tiết.</p>
+    </div>
+  </div>
+
+  <!-- 6. MODAL PHÓNG TO HÌNH ẢNH TOÀN MÀN HÌNH -->
+  <div class="img-modal" id="imgModal" onclick="closeZoom()" hidden>
+    <button class="img-modal-close" onclick="closeZoom()">&times;</button>
+    <div class="img-modal-content" onclick="event.stopPropagation()">
+      <img id="modalImg" src="" alt="Chi tiết">
+      <div id="modalCap" class="img-modal-cap"></div>
+    </div>
+  </div>
+
+  <script src="soclon_script.js"></script>
+</body>
+</html>
